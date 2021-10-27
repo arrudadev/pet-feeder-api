@@ -2,5 +2,8 @@
   "name": "pet-feeder-api",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.4.4"
+  }
 }
