@@ -1,0 +1,32 @@
+module.exports = {
+  env: {
+    es2017: true,
+    node: true,
+  },
+  extends: ['airbnb-base', 'plugin:prettier/recommended'],
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaVersion: 13,
+    sourceType: 'module',
+  },
+  plugins: ['@typescript-eslint', 'import', 'prettier'],
+  rules: {
+    'class-methods-use-this': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/interface-name-prefix': 'off',
+    '@typescript-eslint/no-var-requires': 'off',
+    '@typescript-eslint/camelcase': 'off',
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    'linebreak-style': 'off',
+    'comma-spacing': 2,
+    'no-multiple-empty-lines': [2, { max: 1 }],
+    'no-trailing-spaces': 2,
+    'import/extensions': 'off',
+    'import/no-unresolved': 'off',
+    camelcase: 'off',
+    'object-curly-newline': 'off',
+    'max-len': 'off',
+    'import/prefer-default-export': 'off',
+    'prettier/prettier': 'error',
+  },
+};
