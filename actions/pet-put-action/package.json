@@ -1,0 +1,15 @@
+{
+	"name": "pet-put-action",
+	"description": "Node IBM Cloud Functions action to update Pet into IBM Cloudant database",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/monteiro-alexandre/pet-feeder-api"
+	},
+	"version": "1.0.0",
+	"main": "index.js",
+	"dependencies": {
+		"@cloudant/cloudant": "^4.5.1",
+		"firebase-admin": "^10.0.0"
+	}
+}
