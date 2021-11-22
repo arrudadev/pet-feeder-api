@@ -28,5 +28,7 @@ module.exports = {
     'max-len': 'off',
     'import/prefer-default-export': 'off',
     'prettier/prettier': 'error',
+    'global-require': 'off',
+    'prefer-promise-reject-errors': 'off',
   },
 };
