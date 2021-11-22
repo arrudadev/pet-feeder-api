@@ -49,6 +49,15 @@ function install() {
     --web true
   cd ../..
 
+  echo "Installing GET Pet Action"
+  cd actions/pet-get-action
+  yarn install
+  zip -rq action.zip *
+  ibmcloud fn action create pet/pet-get action.zip \
+    --kind nodejs:12 \
+    --web true
+  cd ../..
+
   echo -e "Install Complete"
 }
 
@@ -58,6 +67,7 @@ function uninstall() {
   echo "Removing actions..."
   ibmcloud fn action delete pet/pet-post
   ibmcloud fn action delete pet/pet-put
+  ibmcloud fn action delete pet/pet-get
 
   echo "Removing package..."
   ibmcloud fn package delete pet

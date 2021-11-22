@@ -30,5 +30,6 @@ module.exports = {
     'prettier/prettier': 'error',
     'global-require': 'off',
     'prefer-promise-reject-errors': 'off',
+    'no-underscore-dangle': 'off',
   },
 };
