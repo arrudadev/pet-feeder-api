@@ -31,5 +31,7 @@ module.exports = {
     'global-require': 'off',
     'prefer-promise-reject-errors': 'off',
     'no-underscore-dangle': 'off',
+    'no-return-assign': 'off',
+    'no-param-reassign': 'off',
   },
 };

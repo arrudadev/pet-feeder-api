@@ -58,6 +58,15 @@ function install() {
     --web true
   cd ../..
 
+  echo "Installing Dashboard Pet Action"
+  cd actions/pet-dashboard-action
+  yarn install
+  zip -rq action.zip *
+  ibmcloud fn action create pet/pet-dashboard action.zip \
+    --kind nodejs:12 \
+    --web true
+  cd ../..
+
   echo -e "Install Complete"
 }
 
@@ -68,6 +77,7 @@ function uninstall() {
   ibmcloud fn action delete pet/pet-post
   ibmcloud fn action delete pet/pet-put
   ibmcloud fn action delete pet/pet-get
+  ibmcloud fn action delete pet/pet-dashboard
 
   echo "Removing package..."
   ibmcloud fn package delete pet
